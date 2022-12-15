@@ -1,0 +1,79 @@
+@use 'variaveis';
+
+.footer {
+    color: variaveis.$corTextFooter;
+
+    h3 {
+        margin: 0 0 30px;
+        padding: 0;
+        font-size: 1em;
+        font-weight: 400;
+    }
+
+    &__ul {
+        box-sizing: border-box;
+        font-size: 13px;
+        max-width: 1000px;
+        display: grid;
+        grid-template-columns: 240px 240px 240px 240px;
+        
+        @media (max-width: 768px) {
+            grid-template-columns: 120px 120px;
+        }
+
+        @media (min-width: 767px) and (max-width: 1023px) {
+            grid-template-columns: 180px 180px 180px 180px;
+        }
+    }
+
+    &__p {
+        margin-top: 24px;
+        font-size: 13px;
+    }
+
+    &__call {
+        color: variaveis.$corTextFooter;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__div {
+        margin: 0 auto;
+        max-width: 1000px;
+        padding: 70px 45px;
+    }
+
+    &__select {
+        color: variaveis.$corTextFooter;
+        padding: 16px 26px;
+        margin: 26px 0;
+        background-color: variaveis.$corDeFundo;
+        background-image: none;
+        border: 1px solid variaveis.$corBorda;
+        border-radius: 2px;
+        color: variaveis.$corTextLinkFooter;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    &__container {
+        &__list {
+            list-style: none;
+            margin-bottom: 16px;
+            margin-left: 8px;
+            display: inline-block;
+        }
+
+        &__link {
+        text-decoration: none;
+        color: variaveis.$corTextFooter;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

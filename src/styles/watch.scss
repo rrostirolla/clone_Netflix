@@ -1,0 +1,41 @@
+@use 'variaveis';
+
+.watch {
+    padding: 5.6vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    border-bottom: 8px solid variaveis.$corBordaHero;
+
+    @media (max-width: 768px) {
+        padding: 0;
+        text-align: center;
+        width: 100%;
+        display: block;
+
+        img{
+            max-width: 360px;
+        }
+    }
+
+    @media (min-width: 767px) and (max-width: 1023px) {
+        display: block;
+        text-align: center;
+    }
+
+    div {
+        h1 {
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            margin-top: 18px;
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
+            width: 80%;
+            margin: 24px auto;
+        }
+    }
+}

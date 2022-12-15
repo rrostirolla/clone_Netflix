@@ -1,0 +1,166 @@
+@use 'variaveis';
+
+.faq {
+    padding: 5.6vw;
+    margin: 0.25em auto;
+    width: 75%;
+    position: relative;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+
+    @media (min-width: 767px) and (max-width: 1023px) {
+        padding: 0;
+    }
+    
+    h1 {
+        text-align: center;
+        margin-bottom: 36px;
+        
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    form {
+        margin: 0 auto;
+        margin-top: 48px;
+        max-width: 950px;
+        padding-top: 0.85rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+
+        li {
+            margin: 0 108px;
+        }
+    }
+
+    .div_form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+
+        @media (min-width: 767px) and (max-width: 1023px) {
+            display: block;
+        }
+    }
+
+    input {
+        border: 1px solid variaveis.$corBordaInput;
+        border-radius: 2px;
+        box-sizing: border-box;
+        color: variaveis.$corDeFundo;
+        display: block;
+        font-size: 16px;
+        padding: 10px 11px;
+        height: 60px;
+        width: 78.9%;
+        box-shadow: none;
+        line-height: normal;
+
+        @media (max-width: 768px) {
+            height: 48px;
+            width: 100%;
+            margin-top: 16px;
+        }
+
+        @media (min-width: 767px) and (max-width: 1023px) {
+            display: inline;
+            margin-top: 16px;
+            width: 76%;
+        }
+    }
+
+    button {
+        font-family: NetflixSans;
+        text-align: center;
+        font-size: 1.625rem;
+        min-height: 60px;
+        margin: 0.5em auto;
+        padding: 0 1em;
+        background-color: variaveis.$corDeFundoBotao;
+        box-shadow: 0 1px 0 rgb(0 0 0 / 45%);
+        color: variaveis.$corBranca;
+        border: 0;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: variaveis.$corGradient;
+    }
+
+    &__questions {
+        line-height: 1.1;
+        margin-bottom: 0.5rem;
+        list-style: none;
+
+        &__item {
+            background-color: variaveis.$corFundoFaq;
+            margin-bottom: 16px;
+            font-size: 28px;
+
+            &__question {
+                color: variaveis.$corBranca;
+                padding: 0.8em 2.2em 0.8em 1.2em;
+                margin-bottom: 1px;
+                width: 100%;
+                display: block;
+                cursor: pointer;
+                position: relative;
+                border-bottom: 1px solid bc;
+
+                @media (max-width: 768px) {
+                    font-size: 20px;
+                }
+
+                &::after {
+                    content: '+';
+                    position: absolute;
+                    top: 0;
+                    right: 24px;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    font-size: 40px;
+                }
+            }
+
+            &__answer {
+                margin-top: 1px;
+                height: 0;
+                overflow: hidden;
+                padding: 0 24px;
+                transition: height, .5s ease;
+
+                @media (max-width: 768px) {
+                    font-size: 20px;
+                }
+
+                &__link {
+                    color: variaveis.$corBranca;
+                }
+            }
+
+            &--is-open {
+                .faq__questions__item__question::after {
+                    content: 'x';
+                    font-size: 30px;
+                }
+
+                .faq__questions__item__answer {
+                    height: auto;
+                    padding-bottom: 24px;
+                    margin-top: 24px;
+                    transition: height, .5s ease;
+                }
+            }
+        }
+    }
+}

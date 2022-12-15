@@ -1,0 +1,71 @@
+@use 'variaveis';
+
+.header {
+    &__container {
+        padding: 8px 36px;
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 768px) {
+            padding: 8px;
+        }
+
+        @media (min-width: 767px) and (max-width: 1023px) {
+            margin-top: 8px;
+        }
+    }
+
+    &__logo {
+        max-width: 132px;
+        width: 100%;
+
+        @media (max-width: 768px) {
+            width: 120px;
+        }
+    }
+
+    &__links {
+        display: flex;
+        list-style:none;
+
+        &__select {
+            list-style:none;
+            color: variaveis.$corTextFooter;
+            padding: 8px 8px;
+            margin-right: 16px;
+            background-color: variaveis.$corDeFundo;
+            background-image: none;
+            border: 1px solid variaveis.$corBorda;
+            border-radius: 2px;
+            color: variaveis.$corTextLinkFooter;
+            font-size: 16px;
+            cursor: pointer;
+
+            @media (max-width: 768px) {
+                margin-right: 0;
+                margin-left: 8px;
+            }
+        }
+
+        &__item {
+            margin: 5px;
+
+            &__link {
+                justify-content: center;
+                min-height: 60px;
+                padding: 8px 26px;
+                background-color: variaveis.$corDeFundoBotao;
+                box-shadow: 0 1px 0 rgb(0 0 0 / 45%);
+                color: variaveis.$corBranca;
+                border: 0;
+                border-radius: 2px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.especial {
+    margin: 13px;
+}

@@ -1,0 +1,137 @@
+@use 'variaveis';
+
+.hero {
+    padding: 5.6vw;
+    min-height: 80vh;
+    background-image: url(../images/website.jpg);
+    background-size: cover;
+    text-align: center;
+    border-bottom: 8px solid variaveis.$corBordaHero;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+
+    &__content {
+        margin: 0 auto;
+        align-items: center;
+
+        @media (min-width: 767px) and (max-width: 1023px) {
+            margin-top: 180px;
+        }
+
+        h1 {
+            margin: 0 180px;
+
+            @media (max-width: 768px) {
+                margin: 0 auto;
+            }
+
+            @media (min-width: 767px) and (max-width: 1023px) {
+                margin: 0 auto;
+                margin-bottom: 16px;
+                font-size: 70px;
+            }
+        }
+
+        ;
+
+        h2 {
+            text-align: center;
+            max-width: 640px;
+            width: 100%;
+            margin: 16px 280px;
+
+            @media (max-width: 768px) {
+                margin: 16px auto;
+            }
+
+            @media (min-width: 767px) and (max-width: 1023px) {
+                margin: 0 auto;
+                margin-bottom: 24px;
+                font-size: 42px;
+            }
+        }
+
+        ;
+
+        h3 {
+            @media (min-width: 767px) and (max-width: 1023px) {
+                padding: 0 10%;
+                font-size: 26px;
+            }
+        }
+
+        form {
+            li {
+                margin: 0 108px;
+            }
+
+            .div_form {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                padding-top: 20px;
+
+                @media (max-width: 768px) {
+                    display: block;
+                }
+
+                @media (min-width: 767px) and (max-width: 1023px) {
+                    flex-direction: column;
+                }
+            }
+
+            input {
+                border: 1px solid variaveis.$corBordaInput;
+                border-radius: 2px;
+                box-sizing: border-box;
+                color: variaveis.$corDeFundo;
+                display: block;
+                font-size: 16px;
+                padding: 10px 11px;
+                height: 60px;
+                width: 50%;
+                box-shadow: none;
+                line-height: normal;
+
+                @media (max-width: 768px) {
+                    height: 48px;
+                    padding: 10px 10px 0;
+                    width: 100%;
+                    margin-bottom: 8px;
+                }
+
+                @media (min-width: 767px) and (max-width: 1023px) {
+                    margin-bottom: 8px;
+                    width: 70%;
+                }
+            }
+
+            button {
+                font-family: NetflixSans;
+                font-size: 1.625rem;
+                min-height: 60px;
+                padding: 0 1em;
+                background-color: variaveis.$corDeFundoBotao;
+                box-shadow: 0 1px 0 rgb(0 0 0 / 45%);
+                color: variaveis.$corBranca;
+                border: 0;
+                border-radius: 2px;
+                cursor: pointer;
+                padding-left: 26px;
+                padding-right: 26px;
+
+                @media (max-width: 768px) {
+                    font-size: 1rem;
+                    min-height: 40px;
+                }
+            }
+
+            button:hover {
+                background-color: variaveis.$corGradient;
+            }
+        }
+    }
+}
