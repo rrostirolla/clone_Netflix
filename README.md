@@ -1,7 +1,7 @@
 # Clone Netflix
 
 ### 📝 Descrição
-Site clone da página da Netflix.
+Site responsivo clone da página da Netflix.
 
 </br>
 
